@@ -1,0 +1,47 @@
+server:
+  port: 8080
+    
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/controle-financeiro
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+
+  output:
+    ansi:
+      enabled: ALWAYS
+  mail:
+    protocol: "smtp"
+    host: "127.0.0.1"
+    port: 1025
+    username: ""
+    password: ""
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+    default-encoding: UTF-8
+    
+    
+kraken:
+  mail:
+    from: 'some@from.address'
+  auth:
+    jwtSecret: NcRfUjWnZr4u7x!A%D*G-KaPdSgVkYp2s5v8y/B?E(H+MbQeThWmZq4t6w9z$C&F
+    jwtAccessTokenExpirationMs: 3600000 # 1h
+    jwtRefreshTokenExpirationMs: 14400000 # 4h
+    tokenType: bearer
+
+application-description: "@project.description@"
+application-version: "@project.version@"

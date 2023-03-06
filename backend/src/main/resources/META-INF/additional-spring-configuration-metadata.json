@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "kraken.mail.from",
+    "type": "java.lang.String",
+    "description": "A description for 'kraken.mail.from'"
+  },
+  {
+    "name": "application-version",
+    "type": "java.lang.String",
+    "description": "A description for 'application-version'"
+  },
+  {
+    "name": "kraken.auth.jwt-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'kraken.auth.jwt-secret'"
+  },
+  {
+    "name": "kraken.auth.jwtAccessTokenExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'kraken.auth.jwtAccessTokenExpirationMs'"
+  },
+  {
+    "name": "kraken.auth.jwtRefreshTokenExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'kraken.auth.jwtRefreshTokenExpirationMs'"
+  },
+  {
+    "name": "kraken.auth.tokenType",
+    "type": "java.lang.String",
+    "description": "A description for 'kraken.auth.tokenType'"
+  },
+  {
+    "name": "application-description",
+    "type": "java.lang.String",
+    "description": "A description for 'application-description'"
+  }
+]}

@@ -1,0 +1,46 @@
+server:
+  port: ${PORT}
+    
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+
+  output:
+    ansi:
+      enabled: ALWAYS
+  mail:
+    protocol: "smtp"
+    host: ${EMAIL_HOST}
+    port: ${EMAIL_PORT}
+    username: ${EMAIL_USER}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
+    
+kraken:
+  mail:
+    from: ${EMAIL_FROM}
+  auth:
+    jwtSecret: ${JWT_SECRET}
+    jwtAccessTokenExpirationMs: 3600000 # 1h
+    jwtRefreshTokenExpirationMs: 14400000 # 4h
+    tokenType: bearer
+
+application-description: "@project.description@"
+application-version: "@project.version@"

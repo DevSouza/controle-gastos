@@ -1,0 +1,32 @@
+version: "3.9"
+
+networks:
+  postgres-network:
+    driver: bridge
+
+services:
+  # DATABASE
+  postgres:
+    container_name: postgres-dev
+    image: 'postgres:14.1-alpine'
+    environment:
+      POSTGRES_USER: 'admin'
+      POSTGRES_PASSWORD: 'admin'
+      PGDATA: /data/postgres
+    volumes:
+      #- ./volumes/postgres:/data/postgres
+      - ./db:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+
+  # MAIL MOCK
+  mailcatcher:
+    container_name: mailcatcher
+    image: sj26/mailcatcher
+    expose:
+      - 1025
+      - 1080
+    ports:
+      - 1025:1025
+      - 1080:1080
