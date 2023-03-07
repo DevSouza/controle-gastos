@@ -34,5 +34,5 @@ npm run dev
   <br />
   <hr />
   <br />
-  <p align="center">⌨️ com ❤️ por <a href="https://gist.github.com/devsouza">DevSouza</a></p>
+  <p align="center">⌨️ com ❤️ por <a href="https://github.com/devsouza">DevSouza</a></p>
 </div>
