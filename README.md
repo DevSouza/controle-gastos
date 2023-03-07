@@ -1,42 +1,38 @@
 <div margin="1rem">
-  <h1 align="center">Controle Financeiro</h1>
-  <br />
-  <h3 align="center">O Objetivo é controlar as despesas e receitas e definir limites de gastos de forma simples.</h3>
+  <h1 align="center">🪐Controle Gastos</h1>
   <br />
 </div>
 
-## Pilares
-- Fácil de Utilizar
-- Rapido
-- Multiplataforma
-- Estável
+## 🛠️ Construído com
 
-## Funcionalidades Basicas
-### Usuario
-- [x] Cadastro de Usuario ( Sign Up )
-- [x] Recuperação senha ( Forgot Password )
-- [x] Atualização dados usuario ( Profile )
-- [x] Autenticação Usuario ( Sign In )
+* [Java](https://www.java.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Spring Boot](https://spring.io/)
+* [ReactJS](https://reactjs.org/)
+* [Docker](https://www.docker.com/)
 
-### Categorias
-- [x] Cadastro de Categoria
-- [x] Atualização de Categoria
-- [x] Excluir Categoria
-- [x] Limite de Gastos
+### 🔧 Instalação
 
-### Despesa / Receita
-- [x] Listagem ( Por Mês )
-- [x] Cadastro
-- [x] Marcar como pago
-- [ ] Atualizar
-- [x] Excluir
+Para iniciar o projeto execute as etapas abaixo
 
-### Dashboard
-- [x] Total de Despesas no mes
-- [x] Total de Receita no mes
-- [x] Saldo do mes.
+Vá até a pasta **infrastructure** e rode o comando abaixo para iniciar o PostgreSQL e MailCatcher:
+```
+docker-compose -f docker-compose.development.yml up -d
+```
 
-# Start
-1. Inicie a infra com o comando ```docker-compose -f docker-compose.development.yml up -d```
-2. Inicie o backend com o comando ```mvn spring-boot:run```
-3. Inicie o frontend com o comando ```npm run dev```
+Vá até a pasta **backend** e rode o comando abaixo para iniciar o backend:
+```
+mvn spring-boot:run
+```
+
+Vá até a pasta **frontend** e rode o comando abaixo para iniciar o frontend:
+```
+npm run dev
+```
+
+<div>
+  <br />
+  <hr />
+  <br />
+  <p align="center">⌨️ com ❤️ por <a href="https://gist.github.com/devsouza">DevSouza</a></p>
+</div>
