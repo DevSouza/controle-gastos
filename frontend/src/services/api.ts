@@ -1,5 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { parseCookies, setCookie } from 'nookies';
+import { useNavigate } from 'react-router-dom';
 
 type FailedRequestQueueProps = {
   onSuccess: (token: string) => void;

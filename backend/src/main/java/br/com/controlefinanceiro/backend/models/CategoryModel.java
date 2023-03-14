@@ -20,11 +20,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 import br.com.controlefinanceiro.backend.dtos.CategoryDTO;
 import br.com.controlefinanceiro.backend.enuns.TypeCategory;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "TB_CATEGORY")
 @EqualsAndHashCode(callSuper=false)
 @JsonInclude(JsonInclude.Include.NON_NULL)
